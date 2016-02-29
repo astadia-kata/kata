@@ -1,0 +1,52 @@
+<h1>Weather Data Parsing</h1>
+
+<p>In this package, you will find the stub code and tests for a data parsing
+exercise. There is no 'correct' answer but, an implementation is not considered
+complete until the unit tests for that class pass.
+There is a stub and test for each day of the week. The class names are preceded
+with the name of the day. We would like to have a different implementation for
+each day.</p>
+
+<p>You are strongly encouraged to write as many test cases as needed to work out your algorithm. Also,
+as you learn to work with the standard API write tests that help to understand
+how the API works (instead of system.out.println). These tests will serve as
+'notes' later on. Keep all your tests in the corresponding test package.</p>
+
+<h3>Parsing Weather Data</h3>
+<p>
+Parsing text is often a painful experience, in any programming language. 
+Many legacy systems store (and transmit) data in similar flat-file formats
+where the position of the data has significance. I expect you may see a correlation
+between this exercise and systems you have had to work with in the past.
+Hopefully, by completing this exercise, you will have some new techniques
+and notes to serve later on.
+</p>
+
+<p>There are 2 files (weather.dat, weather2.dat) supplied for this exercise located in the same package with the tests. 
+In both files you will find daily weather data for Morristown, NJ for June 2002. The data you are interested in are in the 
+first 3 columns Column 1 (Dy) = Day Number, Column 2 (MxT) = Max Temperature, and Column 3(MnT) is the Min Temperature.
+Your objective is to write a program to output the Day(s) with the smallest smallest temperature variance (low to high).
+</p>
+
+<h3>Hints</h3>
+<ul>
+<li>
+An easy way to read data from an InputStream one line at a time is with a
+java.io.BufferedReader, which can be instantiated with a java.io.InputStreamReader
+</li>
+<li>
+Regular Expressions (java.util.regex.*)
+</li>
+<li>
+java.util.Scanner (java 1.5)
+</li>
+<li>
+java.nio.CharBuffer
+</li>
+<li>
+java.util.StringTokenizer
+</li>
+<li>
+even handrolled parsing through a string or bytes
+</li>
+</ul>

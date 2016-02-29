@@ -1,0 +1,41 @@
+<h1>Array Chop</h1>
+
+<p>
+	In this package, you will find the stub code and tests for an Array Search
+	exercise. There is no 'correct' answer but, an implementation is not considered
+	complete until the unit tests for that class pass.
+</p>
+<p>
+	To implement, simply replace the thrown exception:
+	<tt>throw new UnsupportedOperationException("implement me");</tt>
+	with your implementation. You can run tests by simply right clicking the
+	corresponding test class and selecting <tt>run as->junit</tt>.
+</p>
+<p>
+	I strongly encourage writing more test cases to work out your algorithm. Also,
+	as you learn to work with the standard API write tests that help to understand
+	how the API works (instead of <tt>system.out.println</tt>). These tests can serve as
+	'notes' later on. Keep any new tests in your package.
+</p>
+
+<h2>Background</h2>
+<p>
+	A binary chop (sometimes called the more prosaic binary search) finds
+	the position of value in a sorted array of values. It achieves some
+	efficiency by halving the number of items under consideration each time
+	it probes the values: in the first pass it determines whether the
+	required value is in the top or the bottom half of the list of values.
+	In the second pass in considers only this half, again dividing it in to
+	two. It stops when it finds the value it is looking for, or when it runs
+	out of array to search. Binary searches are a favorite of CS lecturers.
+</p>
+
+<h2>Specification</h2>
+
+<p>
+	Write a binary chop method that takes an integer search target and a
+	sorted array of integers. It should return the integer index of the
+	target in the array, or -1 if the target is not in the array. The
+	signature will logically be:
+</p>
+<tt>chop(int, array_of_int)  -&gt; int</tt>
