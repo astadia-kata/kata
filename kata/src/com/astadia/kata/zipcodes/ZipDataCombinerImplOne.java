@@ -1,4 +1,3 @@
-
 package com.astadia.kata.zipcodes;
 
 import java.io.BufferedReader;
@@ -16,7 +15,7 @@ import java.util.Set;
  * Implementation of IZipDataCombiner. Reads in information from several providers regarding which zipcodes they serve.
  *
  */
-public class ZipDataCombinerImplOne implements IZipDataCombiner {
+public class ZipDataCombinerImplOne implements ZipDataCombiner {
 
     private final Map<Integer, Set<String>> dataProviders;
 
@@ -33,7 +32,7 @@ public class ZipDataCombinerImplOne implements IZipDataCombiner {
      * @param data - the InputStream containing the zipcode data
      */
     @Override
-    public void addData(String carrierName, InputStream data) {
+    public void load(String carrierName, InputStream data) {
         BufferedReader bufferedReader = null;
         try {
             int lineNumber = 1;
@@ -63,7 +62,7 @@ public class ZipDataCombinerImplOne implements IZipDataCombiner {
      * @return - an array of names of providers that service the give zip code.
      */
     @Override
-    public String[] getProviders(String zipCode) {
+    public String[] search(String zipCode) {
         Integer zip = Integer.parseInt(zipCode);
         String[] providers;
         synchronized (dataProviders) {

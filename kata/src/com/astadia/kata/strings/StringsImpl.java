@@ -7,14 +7,7 @@ public class StringsImpl implements Strings {
 	 */
     @Override
 	public int howMany(String strToParse, char c) {
-        int count = 0;
-        char[] whereToLook = strToParse.toCharArray();
-        for (char currentChar : whereToLook) {
-            if (currentChar == c) {
-                count++;
-            }
-        }
-        return count;
+    	throw new UnsupportedOperationException("implement me");
     }
 
     /* (non-Javadoc)
@@ -22,12 +15,6 @@ public class StringsImpl implements Strings {
 	 */
     @Override
 	public int containsHowMany(String wordToFind, String strToParse) {
-        int count = 0;
-        if (strToParse.contains(wordToFind)) {
-            count++;
-            String choppedString = strToParse.substring(strToParse.indexOf(wordToFind) + wordToFind.length());
-            count += containsHowMany(wordToFind, choppedString);
-        }
-        return count;
+    	throw new UnsupportedOperationException("implement me");
     }
 }
